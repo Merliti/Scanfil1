@@ -40,7 +40,7 @@ html, body {
     a{
         width: 27vw;
         height: 12vh;
-        padding: 1.4vh
+        padding: 1.4vh;
         margin-top: 4vh;
         background-color: #004260;
         border: none;
@@ -83,6 +83,7 @@ html, body {
 }
 
 .date {
+
     font-size: 3vh;
     color: #bdc3c7;
 }
