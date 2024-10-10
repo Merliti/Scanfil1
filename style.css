@@ -39,7 +39,8 @@ html, body {
 
     a{
         width: 27vw;
-        height: 10vh;
+        height: 12vh;
+        padding: 1.4vh
         margin-top: 4vh;
         background-color: #004260;
         border: none;
