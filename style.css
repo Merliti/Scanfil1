@@ -9,18 +9,23 @@ html, body {
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
 }
-.logo{
-    width: 100%;
+.logo {
+    width: 70%;
     position: absolute;
+    height: 11vh;
     top: 4vh;
-
 }
+#scan_logo{
+    width: 100%;
+    height: 100%
+}
+
+
+
 .banner {
     width: 100vw;
     position: absolute;
     top: -6vh;
-   
-
 }
 
 .container {
@@ -31,49 +36,41 @@ html, body {
     flex-direction: column;
     width: 30vw;
     height: 30vh;
-    
     text-align: center;
     box-sizing: border-box;
     position: absolute;
+}
 
+.container a {
+    width: 27vw;
+    height: 12vh;
+    padding: 1.4vh;
+    margin-top: 4vh;
+    background-color: #004260;
+    border: none;
+    font-size: 4vh;
+    text-decoration: none;
+    color: white;
+    border-radius: 13px;
+    letter-spacing: 2px;
+    box-shadow: 0 0 5px white;
+}
 
-    a{
-        width: 27vw;
-        height: 12vh;
-        padding: 1.4vh;
-        margin-top: 4vh;
-        background-color: #004260;
-        border: none;
-        font-size: 4vh;
-        text-decoration: none;
-        color: white;
-        border-radius: 13px;
-        letter-spacing: 2px;
-        box-shadow: 0 0 5px white;
-
-        &:hover {
-            box-shadow: 0 0 15px #FDC47C;
-    }
-
-    }
-
-    
+.container a:hover {
+    box-shadow: 0 0 15px #FDC47C;
 }
 
 .footer {
     position: absolute;
     bottom: -12vh;
     width: 100%;
-
 }
 
 .clock-container {
     text-align: center;
     letter-spacing: 4px;
-
     position: fixed;
     bottom: 3vh;
-    width: 10vw;
 
 }
 
@@ -83,7 +80,107 @@ html, body {
 }
 
 .date {
-
     font-size: 3vh;
     color: #bdc3c7;
+}
+
+/* === Media Queries === */
+
+/* Max width 1400px */
+@media only screen and (max-width: 1400px) {
+    .container {
+        width: 35vw;
+        height: 35vh;
+    }
+
+    .container a {
+        width: 32vw;
+        height: 13vh;
+        font-size: 3.5vh;
+    }
+    .clock-container {
+        /* width: 10vw; */
+    }
+
+    #scan_logo{
+        width: 100%;
+        height: 78%
+    }
+
+    .time {
+        font-size: 4.5vh;
+    }
+
+    .date {
+        font-size: 2.8vh;
+    }
+}
+
+/* Between 1400px and 1000px */
+@media only screen and (min-width: 1000px) and (max-width: 1400px) {
+    .logo {
+        width: 100%;
+        position: absolute;
+        top: 4vh;
+    }
+
+    .container {
+        width: 32vw;
+        height: 20vh;
+    }
+
+    .container a {
+        width: 36vw;
+        height: 14vh;
+        font-size: 4vh;
+    }
+    .footer{
+        bottom: -6vh;
+    }
+
+    .time {
+        font-size: 4vh;
+    }
+
+    .date {
+        font-size: 2.5vh;
+    }
+}
+
+/* Below 1000px */
+@media only screen and (max-width: 1000px) {
+    #scan_logo{
+        width: 100%;
+        height: 60%
+    }
+
+    .container {
+        top: 20vh; /* Adjust top margin */
+        width: 80vw;
+        height: auto;
+        padding: 4vw;
+    }
+
+    .container a {
+        width: 60vw;
+        height: auto;
+        font-size: 3.5vh;
+    }
+
+
+    .clock-container {
+
+        width: 50vw;
+    }
+    .footer{
+        bottom: -6vh;
+    }
+
+    .time {
+        font-size: 4vh;
+    }
+
+    .date {
+        font-size: 2.5vh;
+    }
 }
